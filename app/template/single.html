@@ -11,15 +11,17 @@
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css')}}">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 
   </head>
 
@@ -70,7 +72,7 @@
 
 
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">Depot</a>
+              <a href="/" class="text-black"><span class="text-primary">Depot</a>
             </div>
 
             <div class="col-12">
@@ -103,7 +105,7 @@
 
       </header>
 
-      <div class="site-section-cover overlay inner-page bg-light" style="background-image: url('images/depot_delivery_1.jpg')" data-aos="fade">
+      <div class="site-section-cover overlay inner-page bg-light" style="background-image: url('{{ url_for('static', filename='images/depot_delivery_1.jpg') }}')" data-aos="fade">
       
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
@@ -136,7 +138,7 @@
   
               <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
 
-              <p><img src="images/depot_delivery_1.jpg" alt="Image" class="img-fluid"></p>
+              <p><img src="{{ url_for('static', filename='images/depot_delivery_1.jpg') }}" alt="Image" class="img-fluid"></p>
   
               <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
   
@@ -159,7 +161,7 @@
                 <ul class="comment-list">
                   <li class="comment">
                     <div class="vcard bio">
-                      <img src="images/person_2.jpg" alt="Free Website Template by Free-Template.co">
+                      <img src="{{ url_for('static', filename='images/person_2.jpg') }}" alt="Free Website Template by Free-Template.co">
                     </div>
                     <div class="comment-body">
                       <h3>Jacob Smith</h3>
@@ -171,7 +173,7 @@
   
                   <li class="comment">
                     <div class="vcard bio">
-                      <img src="images/person_3.jpg" alt="Free Website Template by Free-Template.co">
+                      <img src="{{ url_for('static', filename='images/person_3.jpg') }}" alt="Free Website Template by Free-Template.co">
                     </div>
                     <div class="comment-body">
                       <h3>Chris Meyer</h3>
@@ -183,7 +185,7 @@
                     <ul class="children">
                       <li class="comment">
                         <div class="vcard bio">
-                          <img src="images/person_1.jpg" alt="Free Website Template by Free-Template.co">
+                          <img src="{{ url_for('static', filename='images/person_1.jpg') }}" alt="Free Website Template by Free-Template.co">
                         </div>
                         <div class="comment-body">
                           <h3>Chintan Patel</h3>
@@ -196,7 +198,7 @@
                         <ul class="children">
                           <li class="comment">
                             <div class="vcard bio">
-                              <img src="images/person_1.jpg" alt="Free Website Template by Free-Template.co">
+                              <img src="{{ url_for('static', filename='images/person_1.jpg') }}" alt="Free Website Template by Free-Template.co">
                             </div>
                             <div class="comment-body">
                               <h3>Jean Doe</h3>
@@ -208,7 +210,7 @@
                               <ul class="children">
                                 <li class="comment">
                                   <div class="vcard bio">
-                                    <img src="images/person_2.jpg" alt="Free Website Template by Free-Template.co">
+                                    <img src="{{ url_for('static', filename='images/person_2.jpg') }}" alt="Free Website Template by Free-Template.co">
                                   </div>
                                   <div class="comment-body">
                                     <h3>Ben Afflick</h3>
@@ -226,7 +228,7 @@
   
                   <li class="comment">
                     <div class="vcard bio">
-                      <img src="images/person_1.jpg" alt="Free Website Template by Free-Template.co">
+                      <img src="{{ url_for('static', filename='images/person_1.jpg') }}" alt="Free Website Template by Free-Template.co">
                     </div>
                     <div class="comment-body">
                       <h3>Jean Doe</h3>
@@ -287,7 +289,7 @@
                 </div>
               </div>
               <div class="sidebar-box">
-                <img src="images/person_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid mb-4 w-50 rounded-circle">
+                <img src="{{ url_for('static', filename='images/person_1.jpg') }}" alt="Free Website Template by Free-Template.co" class="img-fluid mb-4 w-50 rounded-circle">
                 <h3 class="text-black">About The Author</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
                 <p><a href="#" class="btn btn-primary btn-md text-white">Read More</a></p>
@@ -364,18 +366,18 @@
 
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
 
-    <script src="js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 
   </body>
