@@ -1,0 +1,18 @@
+# ClusterConfig object for gpt app:
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: gpt-app-cluster
+  region: us-west-2
+
+nodeGroups:
+  - name: gpt-cluster-worker-nodes
+    instanceType: t2.medium
+    minSize: 1
+    maxSize: 5
+    desiredCapacity: 3
+    volumeSize: 20
+    ssh:
+      publicKeyName: KhalilMSAK
