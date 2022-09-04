@@ -5,7 +5,7 @@
 # app.py should pass pylint
 # (Optional) Build a simple integration test
 
-AppFolder := "app"
+AppFolder := "gpt_app"
 
 setup:
 	# Create python virtualenv & source it
