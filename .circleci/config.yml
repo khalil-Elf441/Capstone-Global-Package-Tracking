@@ -63,7 +63,7 @@ jobs:
                     docker build --tag=$DOCKER_IMAGE_NAME .
                     docker image ls
 
-      upload-docker:
+    upload-docker:
         docker:
           - image: docker:17.05.0-ce-git
     
