@@ -67,3 +67,5 @@ workflows:
     jobs:
       - Lint     
       - Build-Docker-image
+        requires:
+            - Lint
