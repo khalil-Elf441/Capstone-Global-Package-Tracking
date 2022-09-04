@@ -4,7 +4,7 @@
 version: 2.1
 
 jobs:
-    build:
+    Lint:
         docker:
             # Use the same Docker base as the project 
             - image: python:3.7.3-stretch
@@ -42,8 +42,25 @@ jobs:
                     make lint 
 
 
+    Build-Docker-image:
+        docker:
+            # Use the same Docker base as the project 
+            - image: python:3.7.3-stretch
+
+        working_directory: ~/repo
+
+        steps:
+            - checkout
+
+            # run lint!
+            - run:
+                name: Build docker container
+                command: |
+                    docker build --tag=$DOCKER_IMAGE_NAME .
+                    docker image ls
 
 workflows:
   default:
     jobs:
-      - build        
+      - Lint     
+      - Build-Docker-image
