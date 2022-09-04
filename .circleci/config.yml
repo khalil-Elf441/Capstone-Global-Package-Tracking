@@ -93,5 +93,5 @@ workflows:
       - lint     
       - build-docker-image:
             requires: [Lint]
-      - upload-docker
+      - upload-docker:
             requires: [build-docker-image]
