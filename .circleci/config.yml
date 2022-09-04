@@ -92,6 +92,6 @@ workflows:
     jobs:
       - lint     
       - build-docker-image:
-            requires: [Lint]
+            requires: [lint]
       - upload-docker:
             requires: [build-docker-image]
