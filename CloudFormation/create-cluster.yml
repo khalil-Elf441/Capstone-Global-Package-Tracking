@@ -4,11 +4,11 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: gpt-app-cluster
+  name: gpt-app
   region: us-west-2
 
 nodeGroups:
-  - name: gpt-cluster-worker-nodes
+  - name: gpt-app-worker-nodes
     instanceType: t2.medium
     minSize: 1
     maxSize: 5
