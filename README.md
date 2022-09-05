@@ -64,6 +64,7 @@ The Application is based on a python3 script using flask to render a simple webp
         5-eks-stack-cloudformation.PNG
         6-gpt-web-app-access.PNG
         7-deploy-ok.PNG
+        8-deployment-rolling-update-ok.PNG
 ```
 
 
