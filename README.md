@@ -108,3 +108,6 @@ kubectl get svc,po,deploy
 ## Running Web APP
 
 ![6-gpt-web-app-access.PNG](screenshots/6-gpt-web-app-access.PNG "6-gpt-web-app-access.PNG")
+
+
+[more screenshots](https://github.com/khalil-Elf441/Capstone-Global-Package-Tracking/tree/master/screenshots)
