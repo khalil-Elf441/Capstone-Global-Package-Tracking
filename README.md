@@ -65,6 +65,8 @@ The Application is based on a python3 script using flask to render a simple webp
         6-gpt-web-app-access.PNG
         7-deploy-ok.PNG
         8-deployment-rolling-update-ok.PNG
+        9-docker-image-pushed-dockerhub-ok.PNG
+        10-CircleCi-docker-image-pushed-dockerhub-ok.PNG
 ```
 
 
@@ -99,6 +101,12 @@ aws eks update-kubeconfig --region us-west-2 --name gpt-app
 ```
 
 ## Check deployment
+
+### Image repository
+
+DockerHub: [gpt-app](https://hub.docker.com/repository/docker/khalilelf441/gpt-app)
+
+### Running pods
 
 ```sh
 kubectl get svc,po,deploy
