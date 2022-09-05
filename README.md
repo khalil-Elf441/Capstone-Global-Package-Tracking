@@ -20,11 +20,40 @@ In this project I applied the skills and knowledge which were developed througho
 ## Application
 The Application is based on a python3 script using flask to render a simple webpages in the user's browse.
 
+### File description 
+
+```
+├───.circleci
+├───CloudFormation
+├───gpt_app
+│   ├───static
+│   │   ├───css
+│   │   │   └───bootstrap
+│   │   ├───fonts
+│   │   │   ├───flaticon
+│   │   │   │   ├───font
+│   │   │   │   └───license
+│   │   │   └───icomoon
+│   │   │       ├───demo-files
+│   │   │       └───fonts
+│   │   ├───images
+│   │   ├───js
+│   │   └───scss
+│   │       └───bootstrap
+│   │           ├───mixins
+│   │           ├───utilities
+│   │           └───vendor
+│   └───template
+├───k8s
+└───screenshots
+```
+
+
 ## Getting Started
 
 ### Prerequisites
-AWS account
-Install and configure the necessary plugins : aws, git, docker, kubectl, eksctl
+- AWS account
+- Install and configure the necessary plugins : aws, git, docker, kubectl, eksctl
 
 ### Setup
 Create EKS cluster by running the command below: 
@@ -49,3 +78,15 @@ Make sure that your the local kubernetes this up-to-date with the aws eks cluste
 ```sh
 aws eks update-kubeconfig --region us-west-2 --name gpt-app
 ```
+
+## Check deployment
+
+```sh
+kubectl get svc,po,deploy
+```
+
+![4-Check-deployment.PNG](4-Check-deployment.PNG "4-Check-deployment.PNG")
+
+## Running Web APP
+
+![6-gpt-web-app-access.PNG](6-gpt-web-app-access.PNG "6-gpt-web-app-access.PNG")
