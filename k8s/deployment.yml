@@ -33,3 +33,8 @@ spec:
     targetPort: 8080
   selector:
     app: gpt-app
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gpt-np
