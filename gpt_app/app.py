@@ -17,5 +17,5 @@ def single():
 
 
 if __name__ == "__main__":
-    # load pretrained model as clf
     app.run(host='0.0.0.0', port=8080, debug=True)  # specify port=80
+    LOG.info("Running the server app on http://0.0.0.0:8080")
