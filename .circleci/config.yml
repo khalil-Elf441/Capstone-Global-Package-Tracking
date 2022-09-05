@@ -86,11 +86,20 @@ jobs:
               command: |
                 echo "Docker ID and Image: $DOCKER_IMAGE_NAME"
                 docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-                
-                docker tag $DOCKER_IMAGE_NAME $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:${CIRCLE_WORKFLOW_ID:0:7}
-                docker push $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:${CIRCLE_WORKFLOW_ID:0:7}
+                docker tag $DOCKER_IMAGE_NAME $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest
+                docker push $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest
 
-
+    deploy:
+        docker:
+          - image: 'cimg/base:stable'
+        steps:
+          - checkout
+          - kubernetes/install-kubectl
+          - kubernetes/create-or-update-resource:
+              get-rollout-status: true
+              resource-file-path: k8s/deployment.yml
+              resource-name: deployment/gpt-app
+              show-kubectl-command: true
 
 
 workflows:
@@ -101,3 +110,5 @@ workflows:
             requires: [lint]
       - upload-docker:
             requires: [build-docker-image]
+      - deploy:
+            requires: [upload-docker]
