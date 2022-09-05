@@ -22,6 +22,13 @@ The Application is based on a python3 script using flask to render a simple webp
 
 ### File description 
 
+* `.circleci` - CircleCI Pipeline config.
+* `gpt_app` - Application source code, Dockerfile, K8S deployment template.
+* `Cloudfomration` - cluuster config used to deploy a kubernetes cluster using eksctl.
+* `K8s` - config file for kubernetes cluster.
+* `screenshots` - Screenshots for deployment, application logs and CircleCI pipeline.
+
+
 ```
 ├───.circleci
 ├───CloudFormation
@@ -85,8 +92,8 @@ aws eks update-kubeconfig --region us-west-2 --name gpt-app
 kubectl get svc,po,deploy
 ```
 
-![4-Check-deployment.PNG](4-Check-deployment.PNG "4-Check-deployment.PNG")
+![4-Check-deployment.PNG](screenshots/4-Check-deployment.PNG "4-Check-deployment.PNG")
 
 ## Running Web APP
 
-![6-gpt-web-app-access.PNG](6-gpt-web-app-access.PNG "6-gpt-web-app-access.PNG")
+![6-gpt-web-app-access.PNG](screenshots/6-gpt-web-app-access.PNG "6-gpt-web-app-access.PNG")
