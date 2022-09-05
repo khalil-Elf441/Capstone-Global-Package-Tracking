@@ -27,32 +27,43 @@ The Application is based on a python3 script using flask to render a simple webp
 * `Cloudfomration` - cluuster config used to deploy a kubernetes cluster using eksctl.
 * `K8s` - config file for kubernetes cluster.
 * `screenshots` - Screenshots for deployment, application logs and CircleCI pipeline.
-
+* `Makefile` 	Set of instructions that you use to setup environment: setup, install, tests and lints ...
+* `Dockerfile` 	Contains the commands used to create a docker image
 
 ```
+│   .gitignore
+│   Dockerfile
+│   Makefile
+│   README.md
+│
 ├───.circleci
+│       config.yml
+│
 ├───CloudFormation
+│       create-cluster.yml
+│
 ├───gpt_app
-│   ├───static
-│   │   ├───css
-│   │   │   └───bootstrap
-│   │   ├───fonts
-│   │   │   ├───flaticon
-│   │   │   │   ├───font
-│   │   │   │   └───license
-│   │   │   └───icomoon
-│   │   │       ├───demo-files
-│   │   │       └───fonts
-│   │   ├───images
-│   │   ├───js
-│   │   └───scss
-│   │       └───bootstrap
-│   │           ├───mixins
-│   │           ├───utilities
-│   │           └───vendor
+│   │   .DS_Store
+│   │   app.py
+│   │   requirements.txt
+│   │
+...
+│   │
 │   └───template
+│           index.html
+│           single.html
+│
 ├───k8s
+│       deployment.yml
+│
 └───screenshots
+        1-run-lint-failed.PNG
+        2-run-lint-ok.PNG
+        3-CircleCi-pipeline.PNG
+        4-Check-deployment.PNG
+        5-eks-stack-cloudformation.PNG
+        6-gpt-web-app-access.PNG
+        7-deploy-ok.PNG
 ```
 
 
