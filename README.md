@@ -3,5 +3,5 @@
 
 
 ```sh
-eksctl get clusters
+eksctl create cluster -f CloudFormation/create-cluster.yml 
 ```
